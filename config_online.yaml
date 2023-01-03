@@ -37,8 +37,8 @@ proxy-groups:
   - name: ADS🛡
     type: select
     proxies:
-      - 🎯DratVPN🇮🇩
       - REJECT
+      - 🎯DratVPN🇮🇩
   - name: 🔐DW+
     type: select
     proxies:
