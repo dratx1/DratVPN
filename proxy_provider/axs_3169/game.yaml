@@ -15,7 +15,6 @@ proxies:
       headers:
         Host: sg1-v2ray.sshkit.org
     udp: true
-	
   - name: SG2 GAME
     server: 104.16.106.96
     port: 443
@@ -32,7 +31,6 @@ proxies:
       headers:
         Host: sg2-v2ray.sshkit.org
     udp: true
-	
   - name: SG3 GAME
     server: 104.16.106.96
     port: 443
@@ -49,7 +47,6 @@ proxies:
       headers:
         Host: sg3-v2ray.sshkit.org
     udp: true
-	
   - name: SG4 GAME
     server: 104.16.106.96
     port: 443
