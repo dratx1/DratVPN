@@ -182,7 +182,7 @@ rule-providers:
     type: file
     behavior: classical
     path: "./rule_provider/rule_blockADS.yaml"
-    #url: https://raw.githubusercontent.com/dratx1/rule_provider/main/rule_blockADS🛡.yaml
+    #url: https://raw.githubusercontent.com/dratx1/rule_provider/main/rule_blockads.yaml
     interval: 86300
   Direct:
     type: file
