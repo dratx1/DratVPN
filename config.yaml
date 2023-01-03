@@ -96,84 +96,98 @@ proxy-providers:
   Opok:
     type: file
     path: "./proxy_provider/axs_3169/opok.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   Basic:
     type: file
     path: "./proxy_provider/axs_3169/basic.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   Basic2:
     type: file
     path: "./proxy_provider/axs_3169/basic2.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   Game:
     type: file
     path: "./proxy_provider/axs_3169/game.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   Game2:
     type: file
     path: "./proxy_provider/axs_3169/game2.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   Vidio:
     type: file
     path: "./proxy_provider/axs_3169/vidio.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   Vidio2:
     type: file
     path: "./proxy_provider/axs_3169/vidio.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   XOpok:
     type: file
     path: "./proxy_provider/axs_5546/opok.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   XBasic:
     type: file
     path: "./proxy_provider/axs_5546/basic.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   XBasic2:
     type: file
     path: "./proxy_provider/axs_5546/basic2.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   XGame:
     type: file
     path: "./proxy_provider/axs_5546/game.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   XGame2:
     type: file
     path: "./proxy_provider/axs_5546/game2.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   XVidio:
     type: file
     path: "./proxy_provider/axs_5546/vidio.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   XVidio2:
     type: file
     path: "./proxy_provider/axs_5546/vidio.yaml"
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
