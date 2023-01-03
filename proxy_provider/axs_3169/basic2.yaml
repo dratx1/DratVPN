@@ -15,7 +15,6 @@ proxies:
       headers:
         Host: sg1-v2ray.sshkit.org
     udp: true
-	
   - name: SG2 BASIC2
     server: 162.159.138.6
     port: 443
@@ -32,7 +31,6 @@ proxies:
       headers:
         Host: sg2-v2ray.sshkit.org
     udp: true
-	
   - name: SG3 BASIC2
     server: 162.159.138.6
     port: 443
@@ -49,7 +47,6 @@ proxies:
       headers:
         Host: sg3-v2ray.sshkit.org
     udp: true
-	
   - name: SG4 BASIC2
     server: 162.159.138.6
     port: 443
