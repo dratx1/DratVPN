@@ -1,2 +1,2 @@
 # DratVPN
-config cfm cfa dan cfw
+Config CFM , CFA & CFW
