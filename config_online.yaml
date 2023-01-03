@@ -1,0 +1,294 @@
+proxies:
+proxy-groups:
+  - name: 🎯DratVPN🇮🇩
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - AUTO-PING🚀
+      - AUTO-LIST📌
+      - LOADBALANCE♻️
+      - MANUAL🔑
+      - DIRECT
+  - name: MANUAL🔑
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - Basic
+      - XBasic
+      - Basic2
+      - XBasic2
+      - Game
+      - XGame
+      - Game2
+      - XGame2
+      - Opok
+      - XOpok
+      - Vidio
+      - XVidio
+      - Vidio2
+      - XVidio2
+  - name: FLEX💬
+    type: select
+    proxies:
+      - DIRECT
+      - 🎯DratVPN🇮🇩
+  - name: ADS🛡
+    type: select
+    proxies:
+      - 🎯DratVPN🇮🇩
+      - REJECT
+  - name: 🔐DW+
+    type: select
+    proxies:
+      - REJECT
+      - 🎯DratVPN🇮🇩
+  - name: AUTO-PING🚀
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - Basic
+      - XBasic
+      - Basic2
+      - XBasic2
+      - Game
+      - XGame
+      - Game2
+      - XGame2
+      - Opok
+      - XOpok
+      - Vidio
+      - XVidio
+      - Vidio2
+      - XVidio2
+  - name: AUTO-LIST📌
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - Opok
+      - XOpok
+      - Basic
+      - XBasic
+      - Basic2
+      - XBasic2
+      - Vidio
+      - XVidio
+      - Vidio2
+      - XVidio2
+      - Game
+      - XGame
+      - Game2
+      - XGame2
+  - name: LOADBALANCE♻️
+    type: load-balance
+    strategy: round-robin
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    lazy: true
+    proxies:
+      - AUTO-PING🚀
+      - AUTO-LIST📌
+proxy-providers:
+  Opok:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_3169/opok.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_3169/opok.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Basic:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_3169/basic.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_3169/basic.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Basic2:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_3169/basic2.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_3169/basic2.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Game:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_3169/game.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_3169/game.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Game2:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_3169/game2.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_3169/game2.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Vidio:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_3169/vidio.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_3169/vidio.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Vidio2:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_3169/vidio.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_3169/vidio2.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+#-------------------------------------------------------
+  XOpok:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_5546/opok.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_5546/opok.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XBasic:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_5546/basic.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_5546/basic.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XBasic2:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_5546/basic2.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_5546/basic2.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XGame:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_5546/game.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_5546/game.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XGame2:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_5546/game2.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_5546/game2.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XVidio:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_5546/vidio.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_5546/vidio.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XVidio2:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_5546/vidio.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_5546/vidio2.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+rule-providers:
+  BlockADS:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_blockads.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_blockads.yaml
+    interval: 86300
+  Direct:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_direct.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_direct.yaml
+    interval: 86300
+  Line:
+    type: http
+    behavior: domain
+    path: "./rule_provider/rule_line.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_line.yaml
+    interval: 86300
+  Porn:
+    type: http
+    behavior: domain
+    path: "./rule_provider/rule_porn.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_porn.yaml
+    interval: 86300
+  Porn2:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_porn2.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_porn2.yaml
+    interval: 86300
+  Reject:
+    type: http
+    behavior: domain
+    path: "./rule_provider/rule_reject.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_reject.yaml
+    interval: 86300
+  WhatsApp:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_whatsapp.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_whatsapp.yaml
+    interval: 86300
+rules:
+  - GEOSITE,CATEGORY-ADS-ALL,ADS🛡
+  - RULE-SET,BlockADS,ADS🛡
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Line,FLEX💬
+  - RULE-SET,Porn,🔐DW+
+  - RULE-SET,Porn2,🔐DW+
+  - RULE-SET,Reject,ADS🛡
+  - RULE-SET,WhatsApp,FLEX💬
+  - IP-CIDR,127.0.0.1/32,REJECT,no-resolve
+  - IP-CIDR6,::1/128,REJECT,no-resolve
+  - DST-PORT,7895,REJECT
+  - DST-PORT,7892,REJECT
+  - DST-PORT,22,DIRECT
+  - MATCH,🎯DratVPN🇮🇩
