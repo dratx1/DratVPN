@@ -6,6 +6,8 @@ payload:
   - DOMAIN,api.bugsnag.com
   - DOMAIN,app.bugsnag.com
   - DOMAIN,browser.sentry-cdn.com
+  - DOMAIN,app.getsentry.com
+  - DOMAIN,ads.reddit.com
   - DOMAIN,ads.facebook.com
   - DOMAIN,ads-api.twitter.com
   - DOMAIN,widgets.pinterest.com
