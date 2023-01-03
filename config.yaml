@@ -181,44 +181,37 @@ rule-providers:
   BlockADS:
     type: file
     behavior: classical
-    path: "./rule_provider/rule_blockADS.yaml"
-    #url: https://raw.githubusercontent.com/dratx1/rule_provider/main/rule_blockads.yaml
+    path: "./rule_provider/rule_blockads.yaml"
     interval: 86300
   Direct:
     type: file
     behavior: classical
     path: "./rule_provider/rule_direct.yaml"
-    #url: https://raw.githubusercontent.com/dratx1/rule_provider/main/rule_direct.yaml
     interval: 86300
   Line:
     type: file
     behavior: domain
     path: "./rule_provider/rule_line.yaml"
-    #url: https://raw.githubusercontent.com/dratx1/rule_provider/main/rule_line.yaml
     interval: 86300
   Porn:
     type: file
     behavior: domain
     path: "./rule_provider/rule_porn.yaml"
-    #url: https://raw.githubusercontent.com/dratx1/rule_provider/main/rule_porn.yaml
     interval: 86300
   Porn2:
     type: file
     behavior: classical
     path: "./rule_provider/rule_porn2.yaml"
-    #url: https://raw.githubusercontent.com/dratx1/rule_provider/main/rule_porn2.yaml
     interval: 86300
   Reject:
     type: file
     behavior: domain
     path: "./rule_provider/rule_reject.yaml"
-    #url: https://raw.githubusercontent.com/dratx1/rule_provider/main/rule_reject.yaml
     interval: 86300
   WhatsApp:
     type: file
     behavior: classical
     path: "./rule_provider/rule_whatsapp.yaml"
-    #url: https://raw.githubusercontent.com/dratx1/rule_provider/main/rule_whatsapp.yaml
     interval: 86300
 rules:
   - GEOSITE,CATEGORY-ADS-ALL,ADS🛡
