@@ -1,0 +1,68 @@
+proxies:
+  - name: SGX1 VIDIO
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg1-v2ray.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/1466220648/63ab94c1079b9/
+      headers:
+        Host: sg1-v2ray.sshkit.org
+    udp: true
+	
+  - name: SGX2 VIDIO
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2-v2ray.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/1466220648/63ab950f6e162/
+      headers:
+        Host: sg2-v2ray.sshkit.org
+    udp: true
+	
+  - name: SGX3 VIDIO
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3-v2ray.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/1466220648/63ab9531efec7/
+      headers:
+        Host: sg3-v2ray.sshkit.org
+    udp: true
+	
+  - name: SGX4 VIDIO
+    server: 172.67.5.14
+    port: 443
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg4-v2ray.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/1466220648/63ab95581a6f0/
+      headers:
+        Host: sg4-v2ray.sshkit.org
+    udp: true

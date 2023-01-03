@@ -1,0 +1,68 @@
+proxies:
+  - name: SG1 BASIC2
+    server: 162.159.138.6
+    port: 443
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg1-v2ray.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/5248174828/639c6c28c41b6/
+      headers:
+        Host: sg1-v2ray.sshkit.org
+    udp: true
+	
+  - name: SG2 BASIC2
+    server: 162.159.138.6
+    port: 443
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2-v2ray.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/5248174828/639c6c5b2e401/
+      headers:
+        Host: sg2-v2ray.sshkit.org
+    udp: true
+	
+  - name: SG3 BASIC2
+    server: 162.159.138.6
+    port: 443
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3-v2ray.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/5248174828/639c6c82b5ce7/
+      headers:
+        Host: sg3-v2ray.sshkit.org
+    udp: true
+	
+  - name: SG4 BASIC2
+    server: 162.159.138.6
+    port: 443
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg4-v2ray.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/5248174828/639c6ca4eda20/
+      headers:
+        Host: sg4-v2ray.sshkit.org
+    udp: true
