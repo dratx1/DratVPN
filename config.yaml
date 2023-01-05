@@ -250,7 +250,7 @@ proxy-providers:
   Vidio2:
     type: http
     behavior: classical
-    path: "./proxy_provider/axs_3169/vidio.yaml"
+    path: "./proxy_provider/axs_3169/vidio2.yaml"
     url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_3169/vidio2.yaml
     interval: 200
     health-check:
@@ -321,7 +321,7 @@ proxy-providers:
   XVidio2:
     type: http
     behavior: classical
-    path: "./proxy_provider/axs_5546/vidio.yaml"
+    path: "./proxy_provider/axs_5546/vidio2.yaml"
     url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_5546/vidio2.yaml
     interval: 200
     health-check:
