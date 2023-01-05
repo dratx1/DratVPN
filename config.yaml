@@ -203,6 +203,16 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+  Opok2:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_3169/opok2.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_3169/opok2.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
   Basic:
     type: http
     behavior: classical
@@ -269,6 +279,16 @@ proxy-providers:
     behavior: classical
     path: "./proxy_provider/axs_5546/opok.yaml"
     url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_5546/opok.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XOpok2:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/axs_5546/opok2.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_5546/opok2.yaml
     interval: 200
     health-check:
       enable: true
