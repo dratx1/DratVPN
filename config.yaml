@@ -119,6 +119,8 @@ proxy-groups:
       - XGame2
       - Opok
       - XOpok
+      - Opok2
+      - XOpok2
       - Vidio
       - XVidio
       - Vidio2
@@ -154,6 +156,8 @@ proxy-groups:
       - XGame2
       - Opok
       - XOpok
+      - Opok2
+      - XOpok2
       - Vidio
       - XVidio
       - Vidio2
@@ -165,6 +169,8 @@ proxy-groups:
     use:
       - Opok
       - XOpok
+      - Opok2
+      - XOpok2
       - Basic
       - XBasic
       - Basic2
