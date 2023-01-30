@@ -15,22 +15,30 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - Basic
-      - XBasic
-      - Basic2
-      - XBasic2
-      - Game
-      - XGame
-      - Game2
-      - XGame2
       - Opok
       - XOpok
+      - XXOpok
       - Opok2
       - XOpok2
+      - XXOpok2
+      - Basic
+      - XBasic
+      - XXBasic
+      - Basic2
+      - XBasic2
+      - XXBasic2
       - Vidio
       - XVidio
+      - XXVidio
       - Vidio2
       - XVidio2
+      - XXVidio2
+      - Game
+      - XGame
+      - XXGame
+      - Game2
+      - XGame2
+      - XXGame2
   - name: FLEX💬
     type: select
     proxies:
@@ -52,22 +60,30 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
-      - Basic
-      - XBasic
-      - Basic2
-      - XBasic2
-      - Game
-      - XGame
-      - Game2
-      - XGame2
       - Opok
       - XOpok
+      - XXOpok
       - Opok2
       - XOpok2
+      - XXOpok2
+      - Basic
+      - XBasic
+      - XXBasic
+      - Basic2
+      - XBasic2
+      - XXBasic2
       - Vidio
       - XVidio
+      - XXVidio
       - Vidio2
       - XVidio2
+      - XXVidio2
+      - Game
+      - XGame
+      - XXGame
+      - Game2
+      - XGame2
+      - XXGame2
   - name: AUTO-LIST📌
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -75,20 +91,28 @@ proxy-groups:
     use:
       - Opok
       - XOpok
+      - XXOpok
       - Opok2
       - XOpok2
+      - XXOpok2
       - Basic
       - XBasic
+      - XXBasic
       - Basic2
       - XBasic2
+      - XXBasic2
       - Vidio
       - XVidio
+      - XXVidio
       - Vidio2
       - XVidio2
+      - XXVidio2
       - Game
       - XGame
+      - XXGame
       - Game2
       - XGame2
+      - XXGame2
   - name: LOADBALANCE♻️
     type: load-balance
     strategy: round-robin
@@ -255,6 +279,87 @@ proxy-providers:
     behavior: classical
     path: "./proxy_provider/axs_5546/vidio2.yaml"
     url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/axs_5546/vidio2.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+#-------------------------------------------------------
+  XXOpok:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/free/opok.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/free/opok.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XXOpok2:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/free/opok2.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/free/opok2.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XXBasic:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/free/basic.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/free/basic.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XXBasic2:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/free/basic2.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/free/basic2.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XXGame:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/free/game.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/free/game.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XXGame2:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/free/game2.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/free/game2.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XXVidio:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/free/vidio.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/free/vidio.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  XXVidio2:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/free/vidio2.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/free/vidio2.yaml
     interval: 200
     health-check:
       enable: true
