@@ -1,4 +1,4 @@
-# by DratVPN
+# Config By DratVPN
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -6,8 +6,6 @@ mixed-port: 7893
 tproxy-port: 7895
 ipv6: false
 mode: rule
-# log-level: debug
-# log-level: info
 log-level: silent
 allow-lan: true
 external-controller: 127.0.0.1:9090
