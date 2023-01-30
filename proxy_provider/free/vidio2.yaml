@@ -1,0 +1,14 @@
+proxies:
+  - name: SGDO VIDIO2
+    server: 104.22.4.240
+    port: 80
+    type: vmess
+    uuid: 65d39735-dcdd-4c5d-f48b-c7cda31d4bac
+    alterId: 0
+    cipher: auto
+    tls: false
+    ws-opts:
+      path: /sweet
+      headers:
+        Host: x-ui-llyc.hidedns.me
+    udp: true
