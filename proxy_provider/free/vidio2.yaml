@@ -7,6 +7,9 @@ proxies:
     alterId: 0
     cipher: auto
     tls: false
+    skip-cert-verify: true
+    servername: x-ui-llyc.hidedns.me
+    network: ws
     ws-opts:
       path: /sweet
       headers:
