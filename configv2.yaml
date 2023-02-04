@@ -1,0 +1,216 @@
+# Config By DratVPN
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 127.0.0.1:9090
+# external-ui: ui
+secret: ""
+tcp-concurrent: false
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+experimental: {sniff-tls-sni: true, fingerprint: ""}
+sniffer:
+  enable: false
+  sniffing: [tls, http]
+  force-domain:
+    - '+'
+  skip-domain:
+    - '+.google.com'
+  port-whitelist:
+    - '443'
+    - '80'
+  force-dns-mapping: true
+  parse-pure-ip: true
+# hosts: {"cacerts.digicert.com": "104.21.21.147", "ota.googlezip.net": "127.0.0.1", "ota-cache1.googlezip.net": "127.0.0.1", "ota-cache2.googlezip.net": "127.0.0.1"}
+tun:
+  enable: false
+  device: utun
+  stack: system
+  dns-hijack:
+    - any:53
+  auto-route: false
+  auto-detect-interface: false
+  inet4-address: 198.18.0.1/30
+  inet6-address: [fdfe:dcba:9876::1/126]
+  mtu: 9000
+  strict-route: false
+  # inet4-route-address:
+    # - 0.0.0.0/1
+    # - 128.0.0.0/1
+  # inet6-route-address:
+    # - '::/1'
+    # - '8000::/1'
+  # include-android-user:
+    # - 0
+dns:
+  enable: true
+  ipv6: true
+  prefer-h3: false
+  default-nameserver:
+    - '1.1.1.1'
+    - '8.8.8.8'
+  listen: 0.0.0.0:1053
+  use-hosts: true
+  enhanced-mode: redir-host # fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter: ["*.local", "*.localhost"]
+  # proxy-server-nameserver:
+    # - '8.8.8.8'
+  nameserver:
+    - '1.1.1.1'
+    - '8.8.8.8'
+    - '112.215.220.254' #Axis
+    - '112.215.219.254' #Axis
+    - '140.213.82.253'  #Axis
+    - '140.213.82.254'  #Axis
+    - '112.215.203.248' #Axis
+    - '112.215.203.254' #Axis
+    - '112.215.37.182' #XL
+    - '112.215.37.183' #XL
+  fallback:
+    - 'https://cloudflare-dns.com/dns-query'
+    - 'https://dns.google/dns-query'
+  fallback-filter:
+    geoip: false
+    geoip-code: '!ID'
+    # geosite:
+      # - gfw
+    # ipcidr:
+      # - 240.0.0.0/4
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+proxies:
+proxy-groups:
+  - name: 🎯DratVPN🇮🇩
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - AUTO-PING🚀
+      - AUTO-LIST📌
+      - LOADBALANCE♻️
+      - MANUAL🔑
+      - DIRECT
+  - name: MANUAL🔑
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - jhank
+  - name: FLEX💬
+    type: select
+    proxies:
+      - DIRECT
+      - 🎯DratVPN🇮🇩
+  - name: ADS🛡
+    type: select
+    proxies:
+      - REJECT
+      - 🎯DratVPN🇮🇩
+  - name: 🔐DW+
+    type: select
+    proxies:
+      - REJECT
+      - 🎯DratVPN🇮🇩
+  - name: AUTO-PING🚀
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+      - jhank
+  - name: AUTO-LIST📌
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - jhank
+  - name: LOADBALANCE♻️
+    type: load-balance
+    strategy: round-robin
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    lazy: true
+    proxies:
+      - AUTO-PING🚀
+      - AUTO-LIST📌
+proxy-providers:
+  jhank:
+    type: http
+    behavior: classical
+    path: "./proxy_provider/proxy.yaml"
+    url:  https://raw.githubusercontent.com/dratx1/DratVPN/main/proxy_provider/proxy.yaml
+    interval: 200
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+rule-providers:
+  BlockADS:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_blockads.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_blockads.yaml
+    interval: 86300
+  Direct:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_direct.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_direct.yaml
+    interval: 86300
+  Line:
+    type: http
+    behavior: domain
+    path: "./rule_provider/rule_line.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_line.yaml
+    interval: 86300
+  Porn:
+    type: http
+    behavior: domain
+    path: "./rule_provider/rule_porn.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_porn.yaml
+    interval: 86300
+  Porn2:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_porn2.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_porn2.yaml
+    interval: 86300
+  Reject:
+    type: http
+    behavior: domain
+    path: "./rule_provider/rule_reject.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_reject.yaml
+    interval: 86300
+  WhatsApp:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_whatsapp.yaml"
+    url: https://raw.githubusercontent.com/dratx1/DratVPN/main/rule_provider/rule_whatsapp.yaml
+    interval: 86300
+rules:
+  - GEOSITE,CATEGORY-ADS-ALL,ADS🛡
+  - RULE-SET,BlockADS,ADS🛡
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Line,FLEX💬
+  - RULE-SET,Porn,🔐DW+
+  - RULE-SET,Porn2,🔐DW+
+  - RULE-SET,Reject,🔐DW+
+  - RULE-SET,WhatsApp,FLEX💬
+  - IP-CIDR,127.0.0.1/32,REJECT,no-resolve
+  - IP-CIDR6,::1/128,REJECT,no-resolve
+  - DST-PORT,7895,REJECT
+  - DST-PORT,7892,REJECT
+  - DST-PORT,22,DIRECT
+  - MATCH,🎯DratVPN🇮🇩
