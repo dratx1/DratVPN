@@ -15,3 +15,140 @@ proxies:
       headers:
         Host: x-ui-llyc.hidedns.me
     udp: true
+########################333
+  - name: v2raydns
+    server: 112.215.127.32
+    port: 443
+    type: vmess
+    uuid: 3c302ae4-d4c0-48d2-bfe9-b3e2c3b61c62
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg-ray.ipservers.xyz
+    network: ws
+    ws-opts:
+      path: /JAGOANSSH/
+      headers:
+        Host: sg-ray.ipservers.xyz
+    udp: true
+proxies:
+  - name: v2raydns2
+    server: sg-ray.ipservers.xyz
+    port: 443
+    type: vmess
+    uuid: 3c302ae4-d4c0-48d2-bfe9-b3e2c3b61c62
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 112.215.127.32
+    network: ws
+    ws-opts:
+      path: /JAGOANSSH/
+      headers:
+        Host: sg-ray.ipservers.xyz
+    udp: true
+proxies:
+  - name: v2raydns3
+    server: sg-ray.ipservers.xyz
+    port: 443
+    type: vmess
+    uuid: 3c302ae4-d4c0-48d2-bfe9-b3e2c3b61c62
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg-ray.ipservers.xyz
+    network: ws
+    ws-opts:
+      path: /JAGOANSSH/
+      headers:
+        Host: 112.215.127.32
+    udp: true
+proxies:
+  - name: v2raydns4
+    server: sg-ray.ipservers.xyz
+    port: 443
+    type: vmess
+    uuid: 3c302ae4-d4c0-48d2-bfe9-b3e2c3b61c62
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 112.215.127.32
+    network: ws
+    ws-opts:
+      path: /JAGOANSSH/
+      headers:
+        Host: 112.215.127.32
+    udp: true
+#################################
+proxies:
+  - name: v2raydnsx
+    server: 1.1.1.1
+    port: 443
+    type: vmess
+    uuid: 3c302ae4-d4c0-48d2-bfe9-b3e2c3b61c62
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg-ray.ipservers.xyz
+    network: ws
+    ws-opts:
+      path: /JAGOANSSH/
+      headers:
+        Host: sg-ray.ipservers.xyz
+    udp: true
+proxies:
+  - name: v2raydnsx2
+    server: sg-ray.ipservers.xyz
+    port: 443
+    type: vmess
+    uuid: 3c302ae4-d4c0-48d2-bfe9-b3e2c3b61c62
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 1.1.1.1
+    network: ws
+    ws-opts:
+      path: /JAGOANSSH/
+      headers:
+        Host: sg-ray.ipservers.xyz
+    udp: true
+proxies:
+  - name: v2raydnsx3
+    server: sg-ray.ipservers.xyz
+    port: 443
+    type: vmess
+    uuid: 3c302ae4-d4c0-48d2-bfe9-b3e2c3b61c62
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg-ray.ipservers.xyz
+    network: ws
+    ws-opts:
+      path: /JAGOANSSH/
+      headers:
+        Host: 1.1.1.1
+    udp: true
+proxies:
+  - name: v2raydnsx4
+    server: sg-ray.ipservers.xyz
+    port: 443
+    type: vmess
+    uuid: 3c302ae4-d4c0-48d2-bfe9-b3e2c3b61c62
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 1.1.1.1
+    network: ws
+    ws-opts:
+      path: /JAGOANSSH/
+      headers:
+        Host: 1.1.1.1
+    udp: true
