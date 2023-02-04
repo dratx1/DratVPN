@@ -32,7 +32,6 @@ proxies:
       headers:
         Host: sg-ray.ipservers.xyz
     udp: true
-proxies:
   - name: v2raydns2
     server: sg-ray.ipservers.xyz
     port: 443
@@ -49,7 +48,6 @@ proxies:
       headers:
         Host: sg-ray.ipservers.xyz
     udp: true
-proxies:
   - name: v2raydns3
     server: sg-ray.ipservers.xyz
     port: 443
@@ -66,7 +64,6 @@ proxies:
       headers:
         Host: 112.215.127.32
     udp: true
-proxies:
   - name: v2raydns4
     server: sg-ray.ipservers.xyz
     port: 443
@@ -84,7 +81,6 @@ proxies:
         Host: 112.215.127.32
     udp: true
 #################################
-proxies:
   - name: v2raydnsx
     server: 1.1.1.1
     port: 443
@@ -101,7 +97,6 @@ proxies:
       headers:
         Host: sg-ray.ipservers.xyz
     udp: true
-proxies:
   - name: v2raydnsx2
     server: sg-ray.ipservers.xyz
     port: 443
@@ -118,7 +113,6 @@ proxies:
       headers:
         Host: sg-ray.ipservers.xyz
     udp: true
-proxies:
   - name: v2raydnsx3
     server: sg-ray.ipservers.xyz
     port: 443
@@ -135,7 +129,6 @@ proxies:
       headers:
         Host: 1.1.1.1
     udp: true
-proxies:
   - name: v2raydnsx4
     server: sg-ray.ipservers.xyz
     port: 443
